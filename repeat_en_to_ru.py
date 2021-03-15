@@ -42,9 +42,12 @@ def repeat():
     for i in range(len(repeated_words)):
         sleep(period)
         print(f'{i+1}. {repeated_words[i][0]} ==> {repeated_words[i][1]}')
+        os.system(f'termux-toast -g top -b green -c black {i+1}. {repeated_words[i][0]}')
+        os.system(f'termux-tts-speak -p 0.8 -r 0.8 {repeated_words[i][0]}')
     print('\n')
     print(f'{date_time()}\nThe dictionary ended.')
-
+    os.system('termux-toast -g top -b green -c black "The dictionary ended."')
+    os.system('termux-tts-speak -p 0.8 -r 0.8 "The dictionary ended."')
 try:
     repeat()
 except KeyboardInterrupt:
