@@ -1,0 +1,1 @@
+[ { "index": 0, "text": "termux-toast" }, { "index": 1, "text": "termux-tts-speak" } ]
